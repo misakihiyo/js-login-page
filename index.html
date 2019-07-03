@@ -2,11 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icons/style.css">
     <script src="script/script.js"></script>
     <title>Title</title>
 </head>
 <body>
-    
+    <header>
+        
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="#" class="thisform text-white bg-dark opwidget-shadow p-4 rounded ">
+                <h2 class="text-center font-capitalize p-1 text-white mt-2">Login Page</h2>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="bg-dark rounded text-white form-control position-relative" placeholder="Enter email">
+                    <div class="input-group-append">
+                        <p id="vemail"></p>                      
+                    </div>
+                </div>
+                
+                
+                <div class="input-group">
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" class="bg-dark text-white rounded form-control position-relative" placeholder="Enter Password" name="pswd">
+                    <div class="input-group-append">
+                        <p id="check"></p>
+                       <i id="icons" class="icon-eye p-2"></i>
+                      
+                    </div>
+                </div>
+
+                
+                <div class="input-group form-check">
+                    
+                    <input id="checkbox" class="form-check-input" type="checkbox" name="remember"> Remember me
+                   
+                    
+                </div>
+                
+                <button id="submitbutton" type="button" class="btn btn-info col-4 d-block m-auto rounded" disabled>Submit</button>
+            </form>
+
+        </div>
+    </main>
 </body>
 </html>

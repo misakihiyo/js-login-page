@@ -1,1 +1,33 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  background-image: url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#check, #vemail {
+  position: absolute;
+  color: #cfcbcb;
+}
+
+#vemail, #icons {
+  position: absolute;
+  right: 0%;
+}
+
+#check {
+  padding-top: 1%;
+  right: 8%;
+}
+
+.thisform {
+  opacity: 0.8;
+  margin-left: 60%;
+  margin-right: 15%;
+  margin-top: 8%;
+}
+
+#submitbutton {
+  height: 2.5rem;
+  width: 10rem;
+}
+/*# sourceMappingURL=style.css.map */
