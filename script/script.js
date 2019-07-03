@@ -11,6 +11,7 @@ function load() {
     let checkval = 0;
     var key = 'abc123XYZ';
     let locallength = localStorage.length;
+    let i=0;
 
 
     icon.addEventListener("click", function () {
@@ -59,8 +60,8 @@ function load() {
     });
 
     submitbutton.addEventListener("click", function () {
-        if (vemail.innerHTML == "Valid" && password.value != "") {
-            for (var i = 0; i< locallength ; i++){
+        if (vemail.innerHTML == "Valid" && password.value != "" && email.value != "") {
+            for (i = 0; i< locallength ; i++){
                 let idname = "data" + i;
                 let object = localStorage.getItem(idname);
                 let data = JSON.parse(object);
@@ -71,8 +72,25 @@ function load() {
                     nextpage(checkpassword);
                     break;
                 }
-            }            
-           
+                
+            }    
+            
+            if(i == locallength){
+                alert("email not correct");
+            }          
+                       
+        }
+
+        else if (vemail.innerHTML == "invalid"){
+            alert("email is invalid");
+        }
+
+        else if (email.value == ""){
+            alert('email is empty')
+        }
+
+        else if(password.value == ""){
+            alert("password is empty");
         }
 
         else{
