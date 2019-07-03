@@ -12,6 +12,7 @@ body {
 #vemail, #icons {
   position: absolute;
   right: 0%;
+  z-index: 2;
 }
 
 #check {
@@ -29,5 +30,9 @@ body {
 #submitbutton {
   height: 2.5rem;
   width: 10rem;
+}
+
+#pwd {
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,10 @@ body{
 #vemail,#icons{
     position: absolute;
     right: 0%;
+    z-index: 2;
+    
 }
+
 #check{
     padding-top: 1%;
     right: 8%;
@@ -29,4 +32,8 @@ body{
 #submitbutton{
     height: 2.5rem;
     width: 10rem;
+}
+
+#pwd{
+    width: 20px;
 }

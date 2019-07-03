@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="icons/style.css">
     <script src="script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <title>Title</title>
 </head>
-<body>
+<body onload="load()">
     <header>
         
     </header>
@@ -32,7 +33,7 @@
                     <input type="password" id="pwd" class="bg-dark text-white rounded form-control position-relative" placeholder="Enter Password" name="pswd">
                     <div class="input-group-append">
                         <p id="check"></p>
-                       <i id="icons" class="icon-eye p-2"></i>
+                       <i id="icons" class="icon-eye p-2 d-block"></i>
                       
                     </div>
                 </div>
