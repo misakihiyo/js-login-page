@@ -1,0 +1,32 @@
+body{
+    background-image: url(/img/bgcolor.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+#check,#vemail,#vname{
+    position: absolute;
+    color: rgb(207, 203, 203);
+}
+
+#vemail,#vname,#icons,#icons2{
+    position: absolute;
+    right: 0%;
+}
+#check{
+    padding-top: 1%;
+    right: 8%;
+}
+
+.thisform{
+    opacity: 0.8;
+    margin-left: 60%;
+    margin-right: 10%;
+    margin-top: 3%;   
+   
+}
+
+#submitbutton{
+    height: 2.5rem;
+    width: 10rem;
+}
