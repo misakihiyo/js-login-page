@@ -88,7 +88,6 @@ function load() {
         console.log(pass);
         if (pass == pp){
             document.location = "./index2.html";
-            alert("right password");
         }
 
         else{
