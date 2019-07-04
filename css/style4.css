@@ -80,7 +80,7 @@
   background-color: pink;
 }
 
-.container #editfield #edited::active {
+.container #editfield #edited:active {
   background-color: blue;
 }
 

@@ -6,8 +6,11 @@ function load() {
     let vemail = document.getElementById("vemail");
     let email = document.getElementById("email");
     let checkbox = document.getElementById("checkbox");
+    let modal = document.getElementById("modal");
     let idnames = ["email", "pwd"];
     let submitbutton = document.getElementById("submitbutton");
+    let datadismiss = document.getElementById("datadismiss");
+    let mymodal = document.getElementById("myModal");
     let checkval = 0;
     var key = 'abc123XYZ';
     let locallength = localStorage.length;
@@ -77,27 +80,36 @@ function load() {
             }    
             
             if(i == (locallength-1)){
-                alert("email not correct");
+                mymodal.style.display = "block";
+                modal.innerHTML = "email not correct";
             }          
                        
         }
 
         else if (vemail.innerHTML == "invalid"){
-            alert("email is invalid");
+            modal.innerHTML = "email is invalid";
+            mymodal.style.display = "block";
         }
 
         else if (email.value == ""){
-            alert('email is empty')
+            modal.innerHTML = "email is empty";
+            mymodal.style.display = "block";
         }
 
         else if(password.value == ""){
-            alert("password is empty");
+            modal.innerHTML = "password is empty";
+            mymodal.style.display = "block";
         }
 
         else{
-            alert("Something is not valid");
+            modal.innerHTML = "something is not valid";
+            mymodal.style.display = "block";
         }
 
+    });
+
+    datadismiss.addEventListener("click", function(){
+        mymodal.style.display = "none";
     });
 
     function nextpage(checkpassword){
@@ -113,6 +125,8 @@ function load() {
             alert("wrong password");
         }
     }
+
+    
 
 
 
