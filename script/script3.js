@@ -111,7 +111,7 @@ function load() {
         if (vname.innerHTML == "Valid" && vemail.innerHTML == "Valid" && check.innerHTML =="Match") {
             document.location = "./index.html";
             var encrypted = CryptoJS.AES.encrypt(password.value, key);
-            var stringname = "data" + locallength;
+            var stringname = "data" + (locallength-1);
             obj  = {email:email.value, name:name.value, password: encrypted.toString()};
             localStorage.setItem(stringname,JSON.stringify(obj));
            

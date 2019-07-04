@@ -69,13 +69,14 @@ function load() {
                 if (data.email == email.value){
                     let checkpassword = data.password;
                     console.log(checkpassword);
+                    localStorage.setItem("currentlylogged", i);
                     nextpage(checkpassword);
                     break;
                 }
                 
             }    
             
-            if(i == locallength){
+            if(i == (locallength-1)){
                 alert("email not correct");
             }          
                        
