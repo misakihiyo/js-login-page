@@ -1,0 +1,87 @@
+.thisform {
+  width: 30%;
+  display: block;
+  margin: 5% auto;
+  background-image: url(/img/lumitar-A4FJfFBEKts-unsplash.jpg);
+  background-size: 100%;
+}
+
+.input {
+  border: solid 0.5px #aaaaaa;
+  height: 2.5rem;
+  padding: 0.5rem;
+  width: 85%;
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+
+.icon-quill {
+  border: solid #aaaaaa 0.5px;
+  padding: 0.4rem;
+  padding-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 20px;
+  border-radius: 40%;
+  font-size: 1.5rem;
+}
+
+.icon-quill:hover {
+  background-color: #95f0c0;
+  padding: 0.6rem;
+}
+
+#submitbutton {
+  height: 40px;
+  width: 250px;
+}
+
+#submitbutton:hover {
+  background-color: #850505;
+}
+
+#submitbutton:active {
+  background-color: #5300b3;
+}
+
+.container {
+  position: relative;
+}
+
+.container .editfield {
+  position: absolute;
+  display: none;
+  top: 40%;
+  left: 25%;
+  z-index: 2;
+  padding: 3rem;
+  background: #ffffff;
+  border: black solid 1px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.container .editfield #editing {
+  width: 75%;
+  border-radius: 10px;
+  border: black 1px solid;
+  padding: 0.3rem;
+}
+
+.container .editfield #edited {
+  border: none;
+  background-color: #5900ff;
+  color: white;
+  width: 20%;
+  margin-left: 1rem;
+  border-radius: 30px;
+  padding: 0.3rem;
+}
+
+.container .editfield #edited:hover {
+  background-color: pink;
+}
+
+.container .editfield #edited::active {
+  background-color: blue;
+}
+/*# sourceMappingURL=style4.css.map */
