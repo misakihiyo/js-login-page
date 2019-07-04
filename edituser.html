@@ -30,9 +30,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"><i class="icon-eye text-info"></i></a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Dashboard</a> 
-                            <a class="dropdown-item" href="index.html">Logout</a> 
-                            <a class="dropdown-item" href="/edituser.html">Edit info</a>
+                            <a id="dashboard" class="dropdown-item" href="#">Dashboard</a> 
+                            <a id="logout" class="dropdown-item" href="#">Logout</a> 
+                            <a id="editinfo" class="dropdown-item" href="#">Edit info</a>
                             
                         </div>
                     </li>                               
@@ -44,26 +44,37 @@
     <main>
         <div class="container">`
             <div class="row">
-                <div class="sidebar bg-dark col-md-3 border">
-                    <h3 class="text-center text-warning p-2">Sidebar</h3>
+                <div class="sidebar col-md-3 border">
+                    <h4 class="text-center text-info">Sidebar</h4>
                     <ul>
                         <li class="list-item">
                             <a href="#">add user</a>
                         </li>
                         <li class="list-item">
-                            <a href="viewuser.html"> View user</a>
+                            <a href="viewuser"> View user</a>
                         </li>
                         <li class="list-item">
-                            <a href="edituser.html">Edit user</a>
+                            <a href="edituser">Edit user</a>
                         </li>
                         
                     </ul>
                 </div>
                 <div class="dash col-md-9">
-                    <h3 class="text-info text-center p-2">
+                    <h3 class="text-info text-center">
                         Admin Dashboard
                     </h3>
-                    <img src="img/dash.PNG" alt="image cannot be displayed">
+                    <table id="table" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody id="thead">
+                            
+                        </tbody>
+                    </table> 
+
 
                 </div>
             </div>

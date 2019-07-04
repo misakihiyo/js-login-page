@@ -1,0 +1,35 @@
+.container{
+    margin: 0 3%;
+
+}
+
+.sidebar{
+    padding-top: 1%;
+    
+    ul{
+        
+        padding: 0;
+        padding-top: 5%;
+        border-top: white solid 1px;
+       
+        .list-item{
+            list-style-type: none;
+            padding: 1%;
+            text-align: center;
+            
+            
+            a{
+                color: white;
+                text-transform: capitalize;
+                text-align: center;
+            }
+        }
+        
+    }
+}
+
+.dash{
+    img{
+        width: 100%;
+    }
+}

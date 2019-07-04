@@ -1,0 +1,30 @@
+.container {
+  margin: 0 3%;
+}
+
+.sidebar {
+  padding-top: 1%;
+}
+
+.sidebar ul {
+  padding: 0;
+  padding-top: 5%;
+  border-top: white solid 1px;
+}
+
+.sidebar ul .list-item {
+  list-style-type: none;
+  padding: 1%;
+  text-align: center;
+}
+
+.sidebar ul .list-item a {
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.dash img {
+  width: 100%;
+}
+/*# sourceMappingURL=admin.css.map */
