@@ -4,9 +4,6 @@ function load(){
     editinfo=document.getElementById("editinfo");
     dashboard=document.getElementById("dashboard");
 
-    
-
-
 
 
 }

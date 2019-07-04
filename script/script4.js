@@ -23,13 +23,20 @@ function load(){
     let namereg= /^[A-Za-z ,.'-]+$/i;
 
     for (i =0; i <(locallength-1); i++){
-        if (logged == i){
+        let idname = "data" + i;
+        let checkid = JSON.parse(localStorage.getItem(idname));
+        if (checkid == null){
+            locallength+=1;
+        }
 
-            let idname = "data" + i;
-            obj = JSON.parse(localStorage.getItem(idname));
-            
-            break;
-        }       
+        else{
+            if (logged == i){
+                
+                obj = JSON.parse(localStorage.getItem(idname));
+                
+                break;
+            }  
+        }    
     }
 
     email.value = obj.email;

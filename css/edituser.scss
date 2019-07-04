@@ -1,0 +1,80 @@
+.container{
+    position: relative;
+
+    .dash{
+        display: block;
+        margin: 0 auto;
+
+    }
+
+
+    .thisform{
+        position: absolute;
+        top : 10%;
+        left : 35%;
+        display: none;
+    }
+}
+
+#table{
+    thead{
+        tr{
+            th{
+                border-bottom: double 5px #aaaaaa;
+            }
+        }
+    }
+    #tbody{
+        tr{
+            border-bottom: solid 1px #aaaaaa;
+            td{
+                border: none;
+            }
+
+        }
+    }
+}
+
+.input{
+    border: solid 0.5px #aaaaaa;
+    height: 2.5rem;
+    padding: 0.5rem;
+    width: 95%;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+.icon-quill:hover{
+    background-color: rgb(149, 240, 192);
+    padding: 0.6rem;
+    
+}
+
+#submitbutton{
+    height: 40px;
+    width: 250px;
+}
+
+#submitbutton:hover{
+    background-color: rgb(133, 5, 5);
+}
+
+#submitbutton:active{
+    background-color: rgb(83, 0, 179);
+}
+
+#tbody{
+    .editbutton, .deletebutton{
+        background-color: green;
+        width: 35%;
+        height: 30px;
+        color: white;
+        border: none;
+        margin: 3%;
+        border-radius: 10px;
+    }
+
+    .deletebutton{
+        background-color: maroon;
+    }
+}

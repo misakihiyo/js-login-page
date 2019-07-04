@@ -6,12 +6,19 @@ function loading(){
     let loggedin= localStorage.getItem("currentlylogged");
     for (i = 0; i<(locallength-1); i++){
         idname = "data"+i;
-        if (i == loggedin){
+        let objitem = localStorage.getItem(idname);
+        let m = JSON.parse(objitem);
+
+        if(m == null){
+            locallength +=1;
+        }        
+        
+        else{
+            if (i == loggedin){
             console.log(loggedin);
-            let objitem = localStorage.getItem(idname);
-            let m = JSON.parse(objitem);
             username.innerHTML = m.name;
         }
+    }
 
 
     }

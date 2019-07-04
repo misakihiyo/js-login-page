@@ -111,9 +111,23 @@ function load() {
         if (vname.innerHTML == "Valid" && vemail.innerHTML == "Valid" && check.innerHTML =="Match") {
             document.location = "./index.html";
             var encrypted = CryptoJS.AES.encrypt(password.value, key);
-            var stringname = "data" + (locallength-1);
             obj  = {email:email.value, name:name.value, password: encrypted.toString()};
-            localStorage.setItem(stringname,JSON.stringify(obj));
+            for (var i = 0; i<(locallength-1); i++){
+                let idname = "data" +1;
+                let localval = JSON.parse(localStorage.getItem(idname));
+
+                if (localval == null){
+                    localStorage.setItem(idname,JSON.stringify(obj));
+                }
+
+                else if(i == (locallength-2)){
+                    var stringname = "data" + (locallength-1);
+                    localStorage.setItem(stringname,JSON.stringify(obj));
+                }
+            }            
+            
+            
+            
            
         }
 

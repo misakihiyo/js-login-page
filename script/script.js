@@ -64,17 +64,24 @@ function load() {
 
     submitbutton.addEventListener("click", function () {
         if (vemail.innerHTML == "Valid" && password.value != "" && email.value != "") {
-            for (i = 0; i< locallength ; i++){
+            for (i = 0; i< (locallength-1) ; i++){
                 let idname = "data" + i;
                 let object = localStorage.getItem(idname);
                 let data = JSON.parse(object);
+                
+                if(data == null){
+                    locallength +=1;
+                }
 
-                if (data.email == email.value){
-                    let checkpassword = data.password;
-                    console.log(checkpassword);
-                    localStorage.setItem("currentlylogged", i);
-                    nextpage(checkpassword);
-                    break;
+                else{
+
+                    if (data.email == email.value){
+                        let checkpassword = data.password;
+                        console.log(checkpassword);
+                        localStorage.setItem("currentlylogged", i);
+                        nextpage(checkpassword);
+                        break;
+                    }
                 }
                 
             }    
