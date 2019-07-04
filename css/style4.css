@@ -3,7 +3,6 @@
   display: block;
   margin: 5% auto;
   background-image: url(/img/lumitar-A4FJfFBEKts-unsplash.jpg);
-  background-size: 100%;
 }
 
 .input {
@@ -47,7 +46,7 @@
   position: relative;
 }
 
-.container .editfield {
+.container #editfield {
   position: absolute;
   display: none;
   top: 40%;
@@ -60,14 +59,14 @@
   width: 50%;
 }
 
-.container .editfield #editing {
+.container #editfield #editing {
   width: 75%;
   border-radius: 10px;
   border: black 1px solid;
   padding: 0.3rem;
 }
 
-.container .editfield #edited {
+.container #editfield #edited {
   border: none;
   background-color: #5900ff;
   color: white;
@@ -77,11 +76,32 @@
   padding: 0.3rem;
 }
 
-.container .editfield #edited:hover {
+.container #editfield #edited:hover {
   background-color: pink;
 }
 
-.container .editfield #edited::active {
+.container #editfield #edited::active {
   background-color: blue;
+}
+
+.container #confirm {
+  position: absolute;
+  display: none;
+  top: 40%;
+  left: 25%;
+  z-index: 2;
+  padding: 3rem;
+  background: #ffffff;
+  border: black solid 1px;
+  border-radius: 5px;
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  z-index: 2;
+  padding: 3rem;
+  background: #ffffff;
+  border: black solid 1px;
+  border-radius: 5px;
+  width: 50%;
 }
 /*# sourceMappingURL=style4.css.map */

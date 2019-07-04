@@ -4,7 +4,7 @@
     display: block;
     margin: 5% auto;
     background-image: url(/img/lumitar-A4FJfFBEKts-unsplash.jpg);
-    background-size: 100%;
+    
 }
 
 .input{
@@ -48,7 +48,7 @@
 .container{
     position: relative;
 
-    .editfield{
+    #editfield{
         position: absolute;
         display: none;
         top:40%;
@@ -84,5 +84,26 @@
         #edited::active{
             background-color: blue;
         }
+    }
+
+    #confirm{
+        position: absolute;
+        display: none;
+        top:40%;
+        left: 25%;
+        z-index: 2;
+        padding: 3rem;
+        background: #ffffff;
+        border: black solid 1px;
+        border-radius: 5px;
+        width: 50%;  
+        top:50%;
+        left: 25%;
+        z-index: 2;
+        padding: 3rem;
+        background: #ffffff;
+        border: black solid 1px;
+        border-radius: 5px;
+        width: 50%;  
     }
 }

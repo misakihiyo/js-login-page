@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="icons/style.css">
     <script src="script/script4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="load()">
 
     <main>
         <div class="container">
@@ -20,27 +21,34 @@
                 <div class="input-group">
                     <label for="email"> Edit Email:</label>
                     <input type="text" id="email" class="input" disabled>
-                    <i class="icon-quill"></i>
+                    <i id="emailicon" class="icon-quill"></i>
                 </div>
                 
                 <div class="input-group">
                     <label for="name">Edit Name:</label>
                     <input type="text" id="name" class="input" disabled>
-                    <i class="icon-quill"></i>
+                    <i id="nameicon" class="icon-quill"></i>
                 </div>
 
                 <div class="input-group">
                     <label for="pwd">Edit Password: </label>
                     <input id="password" class="input" type="password" disabled>
-                    <i class="icon-quill"></i>
+                    <i id="passwordicon" class="icon-quill"></i>
                 </div>
 
                 <button id="submitbutton" type="button" class="btn btn-success col-4 d-block m-auto rounded">Submit</button>
             </form>
 
-            <div class="editfield">
+            <div id="confirm">
+                <p class="text-weight-bold">Confirm password:</p>
+                <input type="password" id="confirmpass">
+                <button id="conpass" type="button">Confirm</button>
+            </div>
+
+            <div id="editfield">
                 <input type="text" id="editing">
                 <button id="edited">Edit</button>
+                <p id="error"></p>
             </div>
         </div>
 
