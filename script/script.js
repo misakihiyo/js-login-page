@@ -64,7 +64,7 @@ function load() {
 
     submitbutton.addEventListener("click", function () {
         if (vemail.innerHTML == "Valid" && password.value != "" && email.value != "") {
-            for (i = 0; i< (locallength-1) ; i++){
+            for (i = 0; i< (locallength-2) ; i++){
                 let idname = "data" + i;
                 let object = localStorage.getItem(idname);
                 let data = JSON.parse(object);
@@ -75,20 +75,43 @@ function load() {
 
                 else{
 
-                    if (data.email == email.value){
+                    if (data.email == email.value && data.verified == "unverified"){
+                        console.log("ununun");
+                        modal.innerHTML = "unverified";
+                        mymodal.style.display = "block";
+                    }
+
+                    else if (data.email == email.value && data.verified == "verified"){
                         let checkpassword = data.password;
-                        console.log(checkpassword);
                         localStorage.setItem("currentlylogged", i);
                         nextpage(checkpassword);
                         break;
                     }
                 }
                 
-            }    
+            }   
+             
             
-            if(i == (locallength-1)){
-                mymodal.style.display = "block";
-                modal.innerHTML = "email not correct";
+            if(i == (locallength-2)){
+
+                if (email.value == "admin@gmail.com"){
+                    let checpassword = JSON.parse(localStorage.getItem("admin"));
+                    
+                    var decrypt = CryptoJS.AES.decrypt(checpassword.password, key);
+                    var pass = decrypt.toString(CryptoJS.enc.Utf8);
+
+                    if (pass == password.value){
+                        document.location="admin.html";
+                        localStorage.setItem("currentlylogged",99999);
+                       
+                    }
+                    else{
+                        modal.innerHTML="wrong password";
+                        mymodal.style.display = "block";
+                    }
+                   
+                }
+            
             }          
                        
         }
@@ -131,14 +154,5 @@ function load() {
         else{
             alert("wrong password");
         }
-    }
-
-    
-
-
-
-
-
-
-
+    } 
 }

@@ -53,9 +53,9 @@
   background-color: #5300b3;
 }
 
-#tbody .editbutton, #tbody .deletebutton {
+#tbody .editbutton, #tbody .deletebutton, #tbody .verifybutton {
   background-color: green;
-  width: 35%;
+  width: 25%;
   height: 30px;
   color: white;
   border: none;
@@ -65,5 +65,9 @@
 
 #tbody .deletebutton {
   background-color: maroon;
+}
+
+#tbody .verifybutton {
+  background-color: #04388d;
 }
 /*# sourceMappingURL=edituser.css.map */

@@ -4,7 +4,7 @@ function loading(){
     var i;
     let idname;
     let loggedin= localStorage.getItem("currentlylogged");
-    for (i = 0; i<(locallength-1); i++){
+    for (i = 0; i<(locallength-2); i++){
         idname = "data"+i;
         let objitem = localStorage.getItem(idname);
         let m = JSON.parse(objitem);

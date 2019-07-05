@@ -64,9 +64,9 @@
 }
 
 #tbody{
-    .editbutton, .deletebutton{
+    .editbutton, .deletebutton, .verifybutton{
         background-color: green;
-        width: 35%;
+        width: 25%;
         height: 30px;
         color: white;
         border: none;
@@ -76,5 +76,9 @@
 
     .deletebutton{
         background-color: maroon;
+    }
+
+    .verifybutton{
+        background-color: rgb(4, 56, 141);
     }
 }

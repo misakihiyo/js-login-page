@@ -22,7 +22,7 @@ function load(){
     let i;
     let namereg= /^[A-Za-z ,.'-]+$/i;
 
-    for (i =0; i <(locallength-1); i++){
+    for (i =0; i <(locallength-2); i++){
         let idname = "data" + i;
         let checkid = JSON.parse(localStorage.getItem(idname));
         if (checkid == null){

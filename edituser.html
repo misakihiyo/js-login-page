@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/edituser.css">
     <link rel="stylesheet" href="icons/style.css">
     <script src="script/edituser.js"></script>
+    <script src="script/aes.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Document</title>
@@ -28,11 +29,11 @@
                         <a id  = "contact" class="nav-link text-info font-weight-bold" href="#">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"><i class="icon-eye text-info"></i></a>
+                        <a class="nav-link"  id="navbarDropdownMenuLink" data-toggle="dropdown"><i class="icon-user-tie text-info"></i></a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <a id="dashboard" class="dropdown-item" href="#">Dashboard</a> 
-                            <a id="logout" class="dropdown-item" href="#">Logout</a> 
-                            <a id="editinfo" class="dropdown-item" href="#">Edit info</a>
+                            <a id="dashboard" class="dropdown-item" href="/admin.html">Dashboard</a> 
+                            <a id="logout" class="dropdown-item" href="index.html">Logout</a> 
+                           
                             
                         </div>
                     </li>                               
@@ -53,6 +54,7 @@
                         <tr>
                             <th>Email</th>
                             <th>Name</th>
+                            <th>Verify</th>
                             <th></th>
                         </tr>
                     </thead>

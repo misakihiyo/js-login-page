@@ -13,7 +13,7 @@ function load() {
     let idnames = ["name", "email", "pwd", "retypepwd"];
     let submitbutton = document.getElementById("submitbutton");
     let checkval = 0;
-    let obj = {email : "", name:"", password:""};
+    let obj = {email : "", name:"", password:"", verified:""};
     var key = 'abc123XYZ';
     let locallength = localStorage.length;
 
@@ -111,17 +111,18 @@ function load() {
         if (vname.innerHTML == "Valid" && vemail.innerHTML == "Valid" && check.innerHTML =="Match") {
             document.location = "./index.html";
             var encrypted = CryptoJS.AES.encrypt(password.value, key);
-            obj  = {email:email.value, name:name.value, password: encrypted.toString()};
-            for (var i = 0; i<(locallength-1); i++){
-                let idname = "data" +1;
+            obj  = {email:email.value, name:name.value, password: encrypted.toString(), verified:"unverified"};
+            
+            for (var i = 0; i<(locallength-2); i++){
+                let idname = "data" +i;
                 let localval = JSON.parse(localStorage.getItem(idname));
 
                 if (localval == null){
                     localStorage.setItem(idname,JSON.stringify(obj));
                 }
 
-                else if(i == (locallength-2)){
-                    var stringname = "data" + (locallength-1);
+                else if(i == (locallength-3)){
+                    var stringname = "data" + (locallength-2);
                     localStorage.setItem(stringname,JSON.stringify(obj));
                 }
             }            
