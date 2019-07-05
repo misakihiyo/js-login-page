@@ -1,9 +1,10 @@
 function load(){
+    let local = localStorage.getItem("currentlylogged");
 
-    logout= document.getElementById("logout");
-    editinfo=document.getElementById("editinfo");
-    dashboard=document.getElementById("dashboard");
+    if (local != 99999){
+        document.location ="index.html";
+        console.log(local);
+    }
 
-
-
+    
 }
